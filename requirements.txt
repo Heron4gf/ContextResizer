@@ -1,0 +1,6 @@
+openai
+python-dotenv
+chromadb
+fastapi
+uvicorn
+httpx
