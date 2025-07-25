@@ -1,6 +1,6 @@
 # ContextResizer Proxy
 
-A reverse proxy built with FastAPI that provides context resizing capabilities for LLM API calls to providers like OpenAI, Anthropic, and OpenRouter.
+A reverse proxy built with FastAPI that enables context resizing for LLM API calls, preserving accuracy while minimizing the context sent to models from providers like OpenAI, Anthropic, and OpenRouter.
 
 ## Features
 
@@ -105,14 +105,12 @@ The proxy can be configured using environment variables:
 | Variable | Description |
 |----------|-------------|
 | `OPENAI_API_KEY` | API key for OpenAI |
-| `ANTHROPIC_API_KEY` | API key for Anthropic |
-| `OPENROUTER_API_KEY` | API key for OpenRouter |
 
 ## OpenAI Client Compatibility
 
 ContextResizer is fully compatible with the OpenAI Python client library, just like Helicone and other reverse proxies. You can use it as a drop-in replacement for the OpenAI API by simply changing the `base_url` parameter.
 
-### Basic Usage (Exact Helicone-style pattern)
+### Basic Usage
 
 ```python
 from openai import OpenAI
